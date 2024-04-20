@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaLaptopCode, FaUser, FaAddressCard, FaCode } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 const StyledNavigator = styled.nav`
   display: flex;
@@ -70,24 +71,26 @@ const StyledDivNavigator = styled.div`
 `;
 
 function Navigator() {
+  const { t } = useTranslation();
+
   return (
     <StyledDivNavigator>
     <StyledNavigator>
       <StyledItem>
         <FaUser />
-        <Tooltip className="tooltip"><StyledTooltipText>Sobre mim</StyledTooltipText></Tooltip>
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-about-me')}</StyledTooltipText></Tooltip>
       </StyledItem>
       <StyledItem>
         <FaLaptopCode />
-        <Tooltip className="tooltip"><StyledTooltipText>Projetos</StyledTooltipText></Tooltip>
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-projects')}</StyledTooltipText></Tooltip>
       </StyledItem>
       <StyledItem>
         <FaCode />
-        <Tooltip className="tooltip"><StyledTooltipText>Stack</StyledTooltipText></Tooltip>
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-skills')}</StyledTooltipText></Tooltip>
       </StyledItem>
       <StyledItem>
         <FaAddressCard />
-        <Tooltip className="tooltip"><StyledTooltipText>Contato</StyledTooltipText></Tooltip>
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-contact')}</StyledTooltipText></Tooltip>
       </StyledItem>
     </StyledNavigator>
     </StyledDivNavigator>

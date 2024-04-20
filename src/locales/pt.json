@@ -2,5 +2,9 @@
   "on-github": "Portfolio no ",
   "title-error": "Erro",
   "label-error": "Algo errado aconteceu.",
-  "label-soon": "Em breve.."
+  "label-soon": "Em breve..",
+  "label-about-me": "Sobre mim",
+  "label-projects": "Projetos",
+  "label-skills": "Habilidades",
+  "label-contact": "Contato"
 }
