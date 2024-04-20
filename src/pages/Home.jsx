@@ -6,7 +6,7 @@ function Home(){
 
   return(
     <>
-      <h1 style={{marginTop: '16%', marginBottom: '16%'}}>{t('label-soon')}</h1>
+      <h1 style={{marginTop: '50vh', marginBottom: '50vh'}}>{t('label-soon')}</h1>
     </>
   )
 

@@ -11,7 +11,7 @@
 
 :root{
   --primary-color: #f0efeb;
-  --secondary-color: #ebeae5;
+  --secondary-color: #dddcd6;
   --accent-color: #000000;
   --primary-text-color: black;
   --secondary-text-color: white;
@@ -19,8 +19,8 @@
 }
 
 [data-theme="dark"]{
-  --primary-color: #08070b;
-  --secondary-color: #0f0e14;
+  --primary-color: #0c0c0c;
+  --secondary-color: #161718;
   --accent-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;

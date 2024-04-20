@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
-import { FaGithub } from "react-icons/fa6";
 import Logo from '../../assets/avm_logo.svg';
 import LogoL from '../../assets/avm_logo_l.svg';
 
@@ -63,7 +62,7 @@ function Footer(){
         ) : (
           <img src={LogoL} alt="Logo" style={{height: '35px', marginBottom: '20px'}}/>
         )}
-        <StyledP>2024 - Victor Morais</StyledP>
+        <StyledP>© 2024 - Victor Morais</StyledP>
       </StyledDiv>
       <StyledOnGithub>{t('on-github')} <StyledGithub target="_blank" href="https://github.com/avictormorais/portfolio">Github</StyledGithub></StyledOnGithub>
     </StyledFooter>
