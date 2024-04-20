@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/avm_logo.svg';
+import LogoL from '../../assets/avm_logo_l.svg';
 import styled from 'styled-components';
 import { FaMoon, FaSun } from "react-icons/fa6";
+import { useTranslation } from 'react-i18next';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -10,6 +12,8 @@ const StyledNav = styled.nav`
   padding-block: 30px;
   align-items: center;
   width: 100vw;
+  position: fixed;
+  top: 0;
 `
 
 const StyledImg = styled.img`
@@ -73,8 +77,36 @@ const StyledSun = styled(FaSun)`
 `
 
 function NavBar() {
-  const [isLight, setIsLight] = useState(false);
-  const [isPT, setIsPT] = useState(false);
+  const [isLight, setIsLight] = useState(() => {
+    const storedTheme = localStorage.getItem('theme');
+    return storedTheme ? storedTheme === 'light' : true;
+  });
+
+  const { i18n } = useTranslation();
+
+  const [isPT, setIsPT] = useState(() => {
+    const storedLanguage = localStorage.getItem('language');
+    if(localStorage.getItem('language') === 'pt'){
+      i18n.changeLanguage('pt');
+    } else{
+      i18n.changeLanguage('en');
+    }
+    return storedLanguage ? storedLanguage === 'pt' : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    document.body.setAttribute('data-theme', isLight ? 'light' : 'dark');
+  }, [isLight]);
+
+  useEffect(() => {
+    localStorage.setItem('language', isPT ? 'pt' : 'en');
+    if(localStorage.getItem('language') === 'pt'){
+      i18n.changeLanguage('pt');
+    } else{
+      i18n.changeLanguage('en');
+    }
+  }, [isPT]);
 
   const handleIconClick = () => {
     setIsLight(!isLight);
@@ -84,9 +116,13 @@ function NavBar() {
     setIsPT(!isPT);
   }
 
-  return(
+  return (
     <StyledNav>
-      <StyledImg src={Logo} alt="Logo - AVM" />
+      {isLight ? (
+        <StyledImg src={Logo} alt="Logo - AVM" />
+      ) : (
+        <StyledImg src={LogoL} alt="Logo - AVM" />
+      )}
       {isLight ? (
         <StyledSun className="icon" onClick={handleIconClick} />
       ) : (
@@ -98,7 +134,7 @@ function NavBar() {
         ) : (
           <StyledP onClick={handleLanguageClick}>PT</StyledP>
         )}
-        <StyledSpan/>
+        <StyledSpan />
         {isPT ? (
           <StyledP onClick={handleLanguageClick}>EN</StyledP>
         ) : (
@@ -107,7 +143,6 @@ function NavBar() {
       </StyledDiv>
     </StyledNav>
   )
-
 }
 
 export default NavBar;
