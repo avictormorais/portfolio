@@ -11,10 +11,11 @@
 
 :root{
   --primary-color: #f0efeb;
-  --secondary-color: #e7e5dc;
+  --secondary-color: #ebeae5;
   --accent-color: #000000;
   --primary-text-color: black;
   --secondary-text-color: white;
+  --padding-inline-layout: 70px;
 }
 
 [data-theme="dark"]{
@@ -23,6 +24,12 @@
   --accent-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;
+}
+
+@media (max-width: 700px) {
+  :root{
+    --padding-inline-layout: 35px;
+  }
 }
 
 Link{

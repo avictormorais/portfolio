@@ -1,4 +1,6 @@
 {
-  "welcome": "Bem-vindo",
-  "test": "Testando o i18n"
+  "on-github": "Portfolio no ",
+  "title-error": "Erro",
+  "label-error": "Algo errado aconteceu.",
+  "label-soon": "Em breve.."
 }

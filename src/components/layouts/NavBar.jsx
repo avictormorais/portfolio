@@ -18,7 +18,7 @@ const StyledNav = styled.nav`
 
 const StyledImg = styled.img`
   height: 35px;
-  margin-left: 70px;
+  margin-left: var(--padding-inline-layout);
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
 `
@@ -36,7 +36,7 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-right: 70px;
+  margin-right: var(--padding-inline-layout);
   flex-direction: row;
 `
 

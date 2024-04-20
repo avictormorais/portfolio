@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import NavBar from './components/layouts/NavBar';
 import Footer from './components/layouts/Footer';
+import Error from './pages/Error';
 import { Outlet } from 'react-router-dom';
 import './index.css'
 
