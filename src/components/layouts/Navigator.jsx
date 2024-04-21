@@ -25,7 +25,7 @@ const StyledItem = styled.div`
   padding: 10px;
   border-radius: 10px;
   margin-block: 8px;
-  font-size: 1.5em;
+  font-size: 1.3em;
   position: relative;
 
   &:hover{

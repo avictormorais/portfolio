@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 
 *{
-  font-family: montserrat, sans-serif;
+  font-family: Rubik, sans-serif;
   margin: 0px;
   padding: 0px;
   text-decoration: none;
@@ -16,6 +17,7 @@
   --primary-text-color: black;
   --secondary-text-color: white;
   --padding-inline-layout: 70px;
+  --content-font: 'Cinzel', serif;
 }
 
 [data-theme="dark"]{
