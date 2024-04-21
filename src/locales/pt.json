@@ -3,9 +3,14 @@
   "title-error": "Erro",
   "label-error": "Algo errado aconteceu.",
   "label-soon": "Em breve..",
+  "label-me": "Victor Morais",
+  "text-me": "Com foco na excelência, comprometido em colaborar efetivamente em equipes de desenvolvimento para oferecer soluções de alta qualidade.",
   "label-about-me": "Sobre mim",
+  "text-about-me": "Um entusiasta da tecnologia apaixonado por desenvolvimento web. Em formação em Ciência da Computação pela UEPB, com experiência prática em projetos de web. Meu objetivo é criar experiências digitais impactantes e funcionais que cativem os usuários. Estou animado para compartilhar meu trabalho e contribuir para projetos inovadores.",
+  "text-about-me-short": "Um entusiasta da tecnologia apaixonado por desenvolvimento web, atualmente cursando Ciência da Computação na UEPB. Estou entusiasmado para compartilhar meu trabalho e contribuir para projetos inovadores.",
   "label-projects": "Projetos",
-  "text-projects": "Explore meus projetos recentes e descubra meu trabalho. Desde aplicações dinâmicas até experimentos criativos. Fique à vontade para explorar, aprender e se inspirar.",
+  "text-projects": "Explore meus projetos recentes e descubra meu trabalho. Desde aplicações web dinâmicas até experimentos criativos, cada projeto reflete meu compromisso com a qualidade e a inovação. Fique à vontade para explorar, aprender e se inspirar.",
+  "text-projects-short": "Explore meus projetos recentes e descubra meu trabalho. Desde aplicações dinâmicas até experimentos criativos. Fique à vontade para explorar, aprender e se inspirar.",
   "label-skills": "Habilidades",
   "label-contact": "Contato"
 }

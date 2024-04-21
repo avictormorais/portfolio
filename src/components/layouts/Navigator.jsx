@@ -14,7 +14,7 @@ const StyledNavigator = styled.nav`
   padding-inline: 10px;
   border-radius: 10px;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;

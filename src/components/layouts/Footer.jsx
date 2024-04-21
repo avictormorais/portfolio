@@ -13,13 +13,7 @@ const StyledFooter = styled.footer`
   width: 100vw;
   padding-block: 35px;
   padding-inline: 35px;
-`
-
-const StyledRh = styled.hr`
-  width: 100vw;
-  height: 1px;
-  background-color: var(--primary-text-color);
-  opacity: .5;
+  border-top: 2px solid var(--secondary-text-color);
 `
 
 const StyledDiv = styled.div`
@@ -53,8 +47,6 @@ function Footer(){
   const { t } = useTranslation();
 
   return(
-    <>
-    <StyledRh/>
     <StyledFooter>
       <StyledDiv>
         {localStorage.getItem('theme') == 'light' ? (
@@ -66,7 +58,6 @@ function Footer(){
       </StyledDiv>
       <StyledOnGithub>{t('on-github')} <StyledGithub target="_blank" href="https://github.com/avictormorais/portfolio">Github</StyledGithub></StyledOnGithub>
     </StyledFooter>
-    </>
   )
 
 }

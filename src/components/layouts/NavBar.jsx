@@ -14,6 +14,11 @@ const StyledNav = styled.nav`
   width: 100vw;
   position: fixed;
   top: 0;
+  border-bottom: 2px solid var(--secondary-color);
+
+  @media screen and (max-width: 700px) {
+    padding-block: 15px;
+  }
 `
 
 const StyledImg = styled.img`
