@@ -42,13 +42,17 @@ function Home(){
      
       <PrincipalSection title={t('label-me')} text={t('text-me')}/>
 
-      <PrincipalSection 
-        title={t('label-about-me')}
-        text={isMobile ? t('text-about-me-short') : t('text-about-me')}
-        childComponent={() => <Button text={`${t('label-download')} CV`} icon={FaUser} tip={"Curriculum Vitae"} onClick={handleCVDownload}/>}
-      />
+      <span id="aboutMeSection">
+        <PrincipalSection 
+          title={t('label-about-me')}
+          text={isMobile ? t('text-about-me-short') : t('text-about-me')}
+          childComponent={() => <Button text={`${t('label-download')} CV`} icon={FaUser} tip={"Curriculum Vitae"} onClick={handleCVDownload}/>}
+        />
+      </span>
 
-      <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
+      <span id="projectsSection">
+        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
+      </span>
 
     </>
   );

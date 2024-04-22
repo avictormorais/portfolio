@@ -74,14 +74,19 @@ const StyledDivNavigator = styled.div`
 function Navigator() {
   const { t } = useTranslation();
 
+  const handleScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <StyledDivNavigator>
     <StyledNavigator>
-      <StyledItem>
+      <StyledItem onClick={() => handleScrollToSection("aboutMeSection")}>
         <FaUser />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-about-me')}</StyledTooltipText></Tooltip>
       </StyledItem>
-      <StyledItem>
+      <StyledItem onClick={() => handleScrollToSection("projectsSection")}>
         <FaLaptopCode />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-projects')}</StyledTooltipText></Tooltip>
       </StyledItem>
