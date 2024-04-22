@@ -54,11 +54,12 @@ const Tooltip = styled.span`
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
   white-space: nowrap;
-
 `;
 
 const StyledTooltipText = styled.p`
   margin-inline: 10px;
+  font-family: var(--content-font);
+  font-weight: 600;
 `
 
 const StyledDivNavigator = styled.div`

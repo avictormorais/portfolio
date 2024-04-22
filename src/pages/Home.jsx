@@ -2,24 +2,28 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "styled-components";
 import PrincipalSection from "../components/PrincipalSection";
+import Button from "../components/Button";
+import { FaUser } from "react-icons/fa";
 
-const StyledMainDiv = styled.div`
-  height: 60vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 250px;
+const StyledTest = styled.div`
+  height: 100vh;
+`
 
-  @media screen and (max-width: 700px) {
-    height: 40vh;
+const StyledMarginTop = styled.span`
+  height: 25vh;
+
+  @media screen and (max-width: 700px){
+    height: 20vh;
   }
 `
 
 function Home(){
   const { t } = useTranslation();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+
+  let handleCVDownload = () => {
+    console.log('CV')
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,17 +38,18 @@ function Home(){
 
   return (
     <>
-      <span style={{ marginTop: '95px' }}></span>
-      <StyledMainDiv>
-        <PrincipalSection title={t('label-me')} text={t('text-me')} />
-      </StyledMainDiv>
-      <StyledMainDiv>
-        <PrincipalSection title={t('label-about-me')} text={isMobile ? t('text-about-me-short') : t('text-about-me')} />
-      </StyledMainDiv>
-      <StyledMainDiv>
-        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} />
-      </StyledMainDiv>
-      <span style={{ marginTop: '95px' }}></span>
+      <StyledMarginTop/>
+     
+      <PrincipalSection title={t('label-me')} text={t('text-me')}/>
+
+      <PrincipalSection 
+        title={t('label-about-me')}
+        text={isMobile ? t('text-about-me-short') : t('text-about-me')}
+        childComponent={() => <Button text={`${t('label-download')} CV`} icon={FaUser} tip={"Curriculum Vitae"} onClick={handleCVDownload}/>}
+      />
+
+      <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
+
     </>
   );
 }

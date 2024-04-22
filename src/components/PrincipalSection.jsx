@@ -33,13 +33,39 @@ const StyledP = styled.p`
   }
 `
 
-function PrincipalSection({title, text}){
+const StyledChildDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 30px;
+`
+
+const StyledDiv = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
+  margin-top: 15vh;
+
+  @media screen and (max-width: 700px){
+    min-height: 40vh;
+  }
+`
+
+function PrincipalSection({title, text, childComponent}){
 
   return(
-    <>
+    <StyledDiv>
       <StyledTitle>{title}</StyledTitle>
       <StyledP>{text}</StyledP>
-    </>
+      {childComponent && (
+        <StyledChildDiv>
+          {childComponent()}
+        </StyledChildDiv>
+      )}
+    </StyledDiv>
   )
 
 }
