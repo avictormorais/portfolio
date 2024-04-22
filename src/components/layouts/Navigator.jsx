@@ -12,7 +12,8 @@ const StyledNavigator = styled.nav`
   right: calc(var(--padding-inline-layout) / 2);
   background-color: var(--secondary-color);
   padding-inline: 10px;
-  border-radius: 10px;
+  border-radius: 50px;
+  padding-block: 5px;
 
   @media screen and (max-width: 900px) {
     display: none;
@@ -23,13 +24,15 @@ const StyledItem = styled.div`
   display: flex;
   background-color: var(--primary-color);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 100%;
   margin-block: 8px;
   font-size: 1.3em;
   position: relative;
 
   &:hover{
     cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--secondary-text-color);
   }
   &:hover .tooltip {
     visibility: visible;
