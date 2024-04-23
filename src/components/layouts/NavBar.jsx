@@ -26,6 +26,7 @@ const StyledImg = styled.img`
   margin-left: var(--padding-inline-layout);
   fill: var(--primary-text-color);
   color: var(--primary-text-color);
+  cursor: pointer;
 `
 
 const StyledSpan = styled.span`
@@ -121,12 +122,16 @@ function NavBar() {
     setIsPT(!isPT);
   }
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <StyledNav>
       {isLight ? (
-        <StyledImg src={Logo} alt="Logo - AVM" />
+        <StyledImg src={Logo} onClick={handleScrollToTop} alt="Logo - AVM" />
       ) : (
-        <StyledImg src={LogoL} alt="Logo - AVM" />
+        <StyledImg src={LogoL} onClick={handleScrollToTop} alt="Logo - AVM" />
       )}
       {isLight ? (
         <StyledSun className="icon" onClick={handleIconClick} />
