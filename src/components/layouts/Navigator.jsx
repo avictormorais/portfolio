@@ -18,6 +18,15 @@ const StyledNavigator = styled.nav`
   @media screen and (max-width: 900px) {
     display: none;
   }
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+  }
 `;
 
 const StyledItem = styled.div`
@@ -28,6 +37,8 @@ const StyledItem = styled.div`
   margin-block: 8px;
   font-size: 1.3em;
   position: relative;
+  justify-content: center;
+  align-content: center;
 
   &:hover{
     cursor: pointer;
@@ -37,6 +48,18 @@ const StyledItem = styled.div`
   &:hover .tooltip {
     visibility: visible;
     opacity: 1;
+  }
+
+  @media screen and (max-width: 700px) {
+    background-color: transparent;
+    margin-bottom: 15px;
+    margin-top: 0;
+    margin-inline: 0;
+    width: 100%;
+
+    &:hover{
+      background-color: transparent;
+    }
   }
 `;
 
@@ -57,12 +80,33 @@ const Tooltip = styled.span`
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
   white-space: nowrap;
+
+  @media screen and (max-width: 700px) {
+    opacity: 1;
+    padding-inline: 0;
+    right: 0;
+    left: 0;
+    top: 110%;
+    font-size: .5em;
+    visibility: visible;
+    background-color: transparent;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const StyledTooltipText = styled.p`
   margin-inline: 10px;
   font-family: var(--content-font);
   font-weight: 600;
+  
+  @media screen and (max-width: 700px) {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
 `
 
 const StyledDivNavigator = styled.div`
