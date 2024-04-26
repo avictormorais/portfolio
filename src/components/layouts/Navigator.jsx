@@ -43,7 +43,6 @@ const StyledItem = styled.div`
   &:hover{
     cursor: pointer;
     border-radius: 10px;
-    background-color: var(--secondary-text-color);
   }
   &:hover .tooltip {
     visibility: visible;
@@ -133,13 +132,13 @@ function Navigator() {
         <FaUser />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-about-me')}</StyledTooltipText></Tooltip>
       </StyledItem>
+      <StyledItem onClick={() => handleScrollToSection("skillsSection")}>
+        <FaCode />
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-skills')}</StyledTooltipText></Tooltip>
+      </StyledItem>
       <StyledItem onClick={() => handleScrollToSection("projectsSection")}>
         <FaLaptopCode />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-projects')}</StyledTooltipText></Tooltip>
-      </StyledItem>
-      <StyledItem>
-        <FaCode />
-        <Tooltip className="tooltip"><StyledTooltipText>{t('label-skills')}</StyledTooltipText></Tooltip>
       </StyledItem>
       <StyledItem>
         <FaAddressCard />

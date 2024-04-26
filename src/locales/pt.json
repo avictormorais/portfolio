@@ -9,9 +9,11 @@
   "label-about-me": "Sobre mim",
   "text-about-me": "Um entusiasta da tecnologia apaixonado por desenvolvimento web. Em formação em Ciência da Computação pela UEPB, com experiência prática em projetos de web. Meu objetivo é criar experiências digitais impactantes e funcionais que cativem os usuários. Estou animado para compartilhar meu trabalho e contribuir para projetos inovadores.",
   "text-about-me-short": "Um entusiasta da tecnologia apaixonado por desenvolvimento web, atualmente cursando Ciência da Computação na UEPB. Estou entusiasmado para compartilhar meu trabalho e contribuir para projetos inovadores.",
+  "label-skills": "Habilidades",
+  "text-skills": "Confira algumas linguagens de programação, tecnologias e metodologias em que tenho experiência e que busco constantemente evoluir meu conhecimento.",
   "label-projects": "Projetos",
   "text-projects": "Explore meus projetos recentes e descubra meu trabalho. Desde aplicações web dinâmicas até experimentos criativos, cada projeto reflete meu compromisso com a qualidade e a inovação. Fique à vontade para explorar, aprender e se inspirar.",
   "text-projects-short": "Explore meus projetos recentes e descubra meu trabalho. Desde aplicações dinâmicas até experimentos criativos. Fique à vontade para explorar, aprender e se inspirar.",
-  "label-skills": "Habilidades",
-  "label-contact": "Contato"
+  "label-contact": "Contato",
+  "text-contact": "Estou sempre aberto a novas oportunidades e colaborações. Se você deseja entrar em contato comigo, fique à vontade para me enviar uma mensagem. Estou ansioso para ouvir de você!"
 }

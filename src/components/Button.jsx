@@ -8,7 +8,7 @@ const StyledTip = styled.p`
   margin-top: 15px;
   opacity: 0;
   user-select: none;
-  transition: all .1s ease-in-out;
+  transition: all .3s ease-in-out;
 
   @media screen and (max-width: 700px){
       font-size: .75em;

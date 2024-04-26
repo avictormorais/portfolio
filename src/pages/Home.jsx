@@ -50,10 +50,17 @@ function Home(){
         />
       </span>
 
+      <span id="skillsSection">
+        <PrincipalSection title={t('label-skills')} text={t('text-skills')}/>
+      </span>
+
       <span id="projectsSection">
         <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
       </span>
 
+      <span id="contactSecion">
+        <PrincipalSection title={t('label-contact')} text={t('text-contact')}/>
+      </span>
     </>
   );
 }
