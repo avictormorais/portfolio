@@ -1,0 +1,37 @@
+[
+  {
+    "icon": "mdi:language-javascript",
+    "name": "Javascript",
+    "color": "#edb537"
+  },
+  {
+    "icon": "mdi:language-python",
+    "name": "Python",
+    "color": "#417bac"
+  },
+  {
+    "icon": "mdi:language-java",
+    "name": "Java",
+    "color": "#e87408"
+  },
+  {
+    "icon": "mdi:language-c",
+    "name": "C",
+    "color": "#085e9f"
+  },
+  {
+    "icon": "mdi:language-html5",
+    "name": "HTML",
+    "color": "#ed6738"
+  },
+  {
+    "icon": "flowbite:css-solid",
+    "name": "CSS",
+    "color": "#0989c8"
+  },
+  {
+    "icon": "akar-icons:postgresql-fill",
+    "name": "Postgre",
+    "color": "#366991"
+  }
+]

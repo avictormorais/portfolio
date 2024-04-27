@@ -4,14 +4,17 @@ import { Icon } from '@iconify-icon/react';
 import ToolTip from "../ToolTip";
 
 const StyledIcon = styled(Icon)`
-  font-size: 2.5em;
-  padding: 2px;
+  font-size: 2.2em;
   color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 3px;
+  margin-inline: 5px;
 
   &:hover{
     cursor: pointer;
     border-radius: 10px;
-    background-color: var(--secondary-color);
     color: ${props => props.hoverColor};
   }
 

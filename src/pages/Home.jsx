@@ -4,6 +4,7 @@ import styled from "styled-components";
 import PrincipalSection from "../components/Sections/PrincipalSection";
 import Button from "../components/Clickables/Button";
 import { FaUser } from "react-icons/fa";
+import Skills from "../components/Sections/Skills";
 
 const StyledTest = styled.div`
   height: 100vh;
@@ -51,7 +52,7 @@ function Home(){
       </span>
 
       <span id="skillsSection"> 
-        <PrincipalSection title={t('label-skills')} text={t('text-skills')}/>
+        <PrincipalSection title={t('label-skills')} text={t('text-skills')} childComponent={() => <Skills/>}/>
       </span>
 
       <span id="projectsSection">
