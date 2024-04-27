@@ -1,19 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-
-const StyledTip = styled.p`
-  font-size: 1em;
-  font-family: var(--content-font);
-  font-weight: bolder;
-  margin-top: 15px;
-  opacity: 0;
-  user-select: none;
-  transition: all .3s ease-in-out;
-
-  @media screen and (max-width: 700px){
-      font-size: .75em;
-  }
-`
+import ToolTip from "./ToolTip";
 
 const StyledButton = styled.button`
     font-size: 1em;
@@ -26,12 +13,7 @@ const StyledButton = styled.button`
     border-radius: 10px;
     border: none;
 
-    &:hover{
-      background-color: var(--secondary-color);
-      color: var(--accent-color);
-    }
-
-    &:hover + ${StyledTip} {
+    &:hover + .tooltip {
       opacity: 1;
     }
 
@@ -47,15 +29,14 @@ const StyledDiv = styled.div`
   flex-direction: column;
 `
 
-function Button({text, onClick, tip}){
+function Button({ text, onClick, tip }) {
 
-  return(
+  return (
     <StyledDiv>
       <StyledButton onClick={onClick}>{text}</StyledButton>
-      <StyledTip>{tip}</StyledTip>
+      <ToolTip className="tooltip" tip={tip} />
     </StyledDiv>
   )
-
 }
 
 export default Button;

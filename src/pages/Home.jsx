@@ -50,7 +50,7 @@ function Home(){
         />
       </span>
 
-      <span id="skillsSection">
+      <span id="skillsSection"> 
         <PrincipalSection title={t('label-skills')} text={t('text-skills')}/>
       </span>
 
