@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ToolTip from "./ToolTip";
+import ToolTip from "../ToolTip";
 
 const StyledButton = styled.button`
     font-size: 1em;

@@ -14,6 +14,10 @@ const StyledFooter = styled.footer`
   padding-block: 35px;
   padding-inline: 35px;
   border-top: 2px solid var(--secondary-text-color);
+
+  @media screen and (max-width: 700px){
+    margin-bottom: 65px;
+  }
 `
 
 const StyledDiv = styled.div`

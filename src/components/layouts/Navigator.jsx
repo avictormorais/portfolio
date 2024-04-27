@@ -140,7 +140,7 @@ function Navigator() {
         <FaLaptopCode />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-projects')}</StyledTooltipText></Tooltip>
       </StyledItem>
-      <StyledItem>
+      <StyledItem onClick={() => handleScrollToSection("contactSection")}>
         <FaAddressCard />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-contact')}</StyledTooltipText></Tooltip>
       </StyledItem>

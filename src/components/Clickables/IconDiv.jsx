@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from '@iconify-icon/react';
-import ToolTip from "./ToolTip";
+import ToolTip from "../ToolTip";
 
 const StyledIcon = styled(Icon)`
-  font-size: 2em;
-  padding: 5px;
+  font-size: 2.5em;
+  padding: 2px;
   color: var(--primary-text-color);
 
   &:hover{
@@ -20,12 +20,19 @@ const StyledIcon = styled(Icon)`
   }
 `
 
+const DivICon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+
 function IconDiv({icon, name, color}){  
   return(
-    <>
-        <StyledIcon icon={`mdi:${icon}`} hoverColor={color}></StyledIcon>
+    <DivICon>
+        <StyledIcon icon={`${icon}`} hoverColor={color}></StyledIcon>
         <ToolTip className={"tooltip"} tip={name} icon/>
-    </>
+    </DivICon>
   )
 }
 

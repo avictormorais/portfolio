@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import styled from "styled-components";
-import PrincipalSection from "../components/PrincipalSection";
-import Button from "../components/Button";
+import PrincipalSection from "../components/Sections/PrincipalSection";
+import Button from "../components/Clickables/Button";
 import { FaUser } from "react-icons/fa";
 
 const StyledTest = styled.div`
@@ -58,7 +58,7 @@ function Home(){
         <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
       </span>
 
-      <span id="contactSecion">
+      <span id="contactSection">
         <PrincipalSection title={t('label-contact')} text={t('text-contact')}/>
       </span>
     </>
