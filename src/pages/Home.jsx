@@ -5,6 +5,7 @@ import PrincipalSection from "../components/Sections/PrincipalSection";
 import Button from "../components/Clickables/Button";
 import { FaUser } from "react-icons/fa";
 import Skills from "../components/Sections/Skills";
+import Contacts from "../components/Sections/Contacts";
 
 const StyledTest = styled.div`
   height: 100vh;
@@ -60,7 +61,7 @@ function Home(){
       </span>
 
       <span id="contactSection">
-        <PrincipalSection title={t('label-contact')} text={t('text-contact')}/>
+        <PrincipalSection title={t('label-contact')} text={t('text-contact')} childComponent={() => <Contacts/>}/>
       </span>
     </>
   );

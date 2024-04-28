@@ -67,13 +67,21 @@ const StyledChildDiv = styled.div`
 function BoxIcons({title, content}){
   return (
     <StyledDiv>
-      <StyledChildDiv className="titleDiv">
-        <StyledP>{title}</StyledP>
-        <StyledSpan/>
-      </StyledChildDiv>
+      {title && (
+        <StyledChildDiv className="titleDiv">
+          <StyledP>{title}</StyledP>
+          <StyledSpan/>
+       </StyledChildDiv>
+      )}
       <StyledChildDiv>
         {content && content.map((content, index) => (
-          <IconDiv key={index} icon={content.icon} name={content.name} color={content.color}/>
+          content.url ? (
+            <a key={index} href={content.url} target="_blank" rel="noopener noreferrer">
+              <IconDiv icon={content.icon} name={content.name} color={content.color}/>
+            </a>
+          ) : (
+            <IconDiv key={index} icon={content.icon} name={content.name} color={content.color}/>
+          )
         ))}
       </StyledChildDiv>
     </StyledDiv>

@@ -1,8 +1,8 @@
 import React from "react";
 import BoxIcons from "../Boxes/BoxIcons";
-import languages from "../../SkillsInfos/languages";
-import frameworks from "../../SkillsInfos/frameworks";
-import others from "../../SkillsInfos/others";
+import languages from "../../PersonalInfos/Skills/languages";
+import frameworks from "../../PersonalInfos/Skills/frameworks";
+import others from "../../PersonalInfos/Skills/others";
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next';
 
