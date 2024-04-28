@@ -11,6 +11,7 @@ const StyledIcon = styled(Icon)`
   align-content: center;
   padding: 3px;
   margin-inline: 5px;
+  max-width: 40px;
 
   &:hover{
     cursor: pointer;
@@ -28,6 +29,8 @@ const DivICon = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-inline: 1px;
+  max-width: 60px;
 `
 
 function IconDiv({icon, name, color}){  

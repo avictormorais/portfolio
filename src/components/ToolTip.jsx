@@ -20,7 +20,7 @@ const StyledTip = styled.p`
   }
 
   ${props => props.icon && `
-    font-size: 0.7em;
+    font-size: 0.65em;
   `}
 `
 

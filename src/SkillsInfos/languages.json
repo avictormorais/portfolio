@@ -2,7 +2,7 @@
   {
     "icon": "mdi:language-javascript",
     "name": "Javascript",
-    "color": "#edb537"
+    "color": "#f1db56"
   },
   {
     "icon": "mdi:language-python",
@@ -12,7 +12,7 @@
   {
     "icon": "mdi:language-java",
     "name": "Java",
-    "color": "#e87408"
+    "color": "#f89917"
   },
   {
     "icon": "mdi:language-c",

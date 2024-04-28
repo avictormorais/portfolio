@@ -22,11 +22,11 @@
   {
     "icon": "file-icons:flask",
     "name": "Flask",
-    "color": "black"
+    "color": "var(--primary-text-color)"
   },
   {
     "icon": "simple-icons:express",
     "name": "Express",
-    "color": "#383838"
+    "color": "var(--primary-text-color)"
   }
 ]
