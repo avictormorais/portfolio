@@ -26,7 +26,7 @@ const StyledTip = styled.p`
 
 function ToolTip({ tip, className, icon }) {
   return (
-    <StyledTip className={className} icon={icon}>{tip}</StyledTip>
+    icon ? <StyledTip className={className} icon={"true"}>{tip}</StyledTip> : <StyledTip className={className}>{tip}</StyledTip>
   )
 }
 
