@@ -14,6 +14,7 @@ const StyledIcon = styled(Icon)`
   max-width: 40px;
 
   &:hover{
+    transform: scale(1.135);
     cursor: pointer;
     border-radius: 10px;
     color: ${props => props.hoverColor};

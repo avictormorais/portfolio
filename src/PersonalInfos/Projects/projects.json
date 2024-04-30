@@ -1,27 +1,54 @@
 [
   {
-    "icon": "file_path",
-    "preview": "file_path",
-    "name": "Project Name",
-    "description": "Description sample",
+    "icon": "../../src/assets/posterfy/logo.png",
+    "preview": "../../src/assets/posterfy/preview.png",
+    "name": "Posterfy",
+    "description": "Posterfy is a web application that allows users to create posters for their favorite albums using data and images from Spotify's free API.",
     "technologies": [
       {
         "icon": "mdi:language-javascript",
-        "name": "JavaScript",
         "color": "#f7df1e"
       },
       {
-        "icon": "mdi:language-html5",
-        "name": "HTML",
+        "icon": "flowbite:html-solid",
         "color": "#e34c26"
       },
       {
-        "icon": "mdi:language-css3",
-        "name": "CSS",
-        "color": "#563d7c"
+        "icon": "flowbite:css-solid",
+        "color": "#0989c8"
       }
     ],
-    "github": "github.url",
-    "deploy": "deploy.url"
+    "github": "https://github.com/avictormorais/posterfy",
+    "deploy": "https://avictormorais.github.io/posterfy/"
+  },
+  {
+    "icon": "../../src/assets/moviemetricks/logo.png",
+    "preview": "../../src/assets/moviemetricks/preview.png",
+    "name": "Moviemetricks",
+    "description": "Moviemetricks is a social media where you can share your favorite movies, see what your friends are watching, and comment your oppinion about them.",
+    "technologies": [
+      {
+        "icon": "mdi:react",
+        "color": "#0989c8"
+      },
+      {
+        "icon": "file-icons:flask",
+        "color": "var(--primary-text-color)"
+      },
+      {
+        "icon": "simple-icons:axios",
+        "color": "#671ddf"
+      },
+      {
+        "icon": "bxl:mongodb",
+        "color": "#10a54e"
+      },
+      {
+        "icon": "mdi:jira",
+        "color": "#579dff"
+      }
+    ],
+    "github": "https://github.com/avictormorais/moviemetricks",
+    "deploy": "https://moviemetricks.vercel.app/"
   }
 ]

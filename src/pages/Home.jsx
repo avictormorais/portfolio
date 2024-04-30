@@ -6,10 +6,7 @@ import Button from "../components/Clickables/Button";
 import { FaUser } from "react-icons/fa";
 import Skills from "../components/Sections/Skills";
 import Contacts from "../components/Sections/Contacts";
-
-const StyledTest = styled.div`
-  height: 100vh;
-`
+import Projects from "../components/Sections/Projects";
 
 const StyledMarginTop = styled.span`
   height: 25vh;
@@ -57,7 +54,7 @@ function Home(){
       </span>
 
       <span id="projectsSection">
-        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <StyledTest/>}/>
+        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <Projects/>}/>
       </span>
 
       <span id="contactSection">
