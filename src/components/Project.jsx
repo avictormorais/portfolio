@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import IconSimple from "./Clickables/IconSimple";
+import { useTranslation } from 'react-i18next';
 
 const StyledDivProject = styled.div`
   display: flex;
@@ -146,27 +147,8 @@ const StyledBtn = styled.button`
 `
 
 function Project({ project }) {
-  const [language, setLanguage] = useState(localStorage.getItem('language'));
-
-  useEffect(() => {
-    const handleLanguageChange = () => {
-      setLanguage(localStorage.getItem('language'));
-    };
-
-    window.addEventListener('storage', handleLanguageChange);
-
-    return () => {
-      window.removeEventListener('storage', handleLanguageChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (language === 'pt') {
-      document.documentElement.lang = 'pt';
-    } else {
-      document.documentElement.lang = 'en';
-    }
-  }, [language]);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   return (
     project && (
@@ -182,7 +164,7 @@ function Project({ project }) {
             <StyledH1>{project.name}</StyledH1>
           </StyledInfo>
           <StyledHr />
-          {language === 'pt' ? (
+          {currentLanguage === 'pt' ? (
             <StyledDescription>{project.descriptionPt}</StyledDescription>
           ) : (
             <StyledDescription>{project.description}</StyledDescription>

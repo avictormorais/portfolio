@@ -18,10 +18,16 @@ const StyledMarginTop = styled.span`
 
 function Home(){
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
   let handleCVDownload = () => {
-    console.log('CV')
+    if(currentLanguage == 'pt'){
+      window.open("../src/assets/cv.pdf", "_blank");
+    } else {
+      window.open("../src/assets/cv-en.pdf", "_blank");
+    }
   }
 
   useEffect(() => {
