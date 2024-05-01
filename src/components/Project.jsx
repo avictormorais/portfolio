@@ -1,7 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
-import preview from "../assets/posterfy/preview.png";
-import logo from "../assets/posterfy/logo.png";
 import IconSimple from "./Clickables/IconSimple";
 
 const StyledDivProject = styled.div`
@@ -69,6 +67,7 @@ const StyledInfo = styled.div`
   flex-direction: row;
   align-items: center;
   margin-block: 5px;
+  flex-wrap: wrap;
 
   ${props => props.mobile && `
     display: none;
@@ -146,47 +145,70 @@ const StyledBtn = styled.button`
   }
 `
 
-function Project({ project }){
+function Project({ project }) {
+  const [language, setLanguage] = useState(localStorage.getItem('language'));
 
-  return(
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      setLanguage(localStorage.getItem('language'));
+    };
+
+    window.addEventListener('storage', handleLanguageChange);
+
+    return () => {
+      window.removeEventListener('storage', handleLanguageChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (language === 'pt') {
+      document.documentElement.lang = 'pt';
+    } else {
+      document.documentElement.lang = 'en';
+    }
+  }, [language]);
+
+  return (
     project && (
       <StyledDivProject>
         <StyledInfo mobile='true' title='true'>
-        <StyledLogo src={project.icon}/>
-            <StyledH1>{project.name}</StyledH1>
+          <StyledLogo src={project.icon} />
+          <StyledH1>{project.name}</StyledH1>
         </StyledInfo>
-      <StyledProjectPreview src={project.preview}/>
+        <StyledProjectPreview src={project.preview} />
         <StyledDivInfos>
-
           <StyledInfo title='true'>
-            <StyledLogo src={project.icon}/>
+            <StyledLogo src={project.icon} />
             <StyledH1>{project.name}</StyledH1>
           </StyledInfo>
-          <StyledHr/>
-
-          <StyledDescription>{project.description}</StyledDescription>
-
+          <StyledHr />
+          {language === 'pt' ? (
+            <StyledDescription>{project.descriptionPt}</StyledDescription>
+          ) : (
+            <StyledDescription>{project.description}</StyledDescription>
+          )}
           <StyledInfo>
-            <StyledH3>Technologies:</StyledH3>
+            <StyledH3>Stack:</StyledH3>
             {project.technologies.map((tech, index) => (
-              <IconSimple key={index} icon={tech.icon} color={tech.color}/>
+              <IconSimple key={index} icon={tech.icon} color={tech.color} />
             ))}
           </StyledInfo>
-
           <StyledInfo>
             {project.deploy && (
-              <a href={project.deploy} target="_blank"><StyledBtn>Deploy</StyledBtn></a>
+              <a href={project.deploy} target="_blank" rel="noopener noreferrer">
+                <StyledBtn>Deploy</StyledBtn>
+              </a>
             )}
             {project.github && (
-              <a href={project.github} target="_blank"><StyledBtn>Github</StyledBtn></a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                <StyledBtn>Github</StyledBtn>
+              </a>
             )}
           </StyledInfo>
-
         </StyledDivInfos>
       </StyledDivProject>
     )
-  )
-
+  );
 }
 
 export default Project;
