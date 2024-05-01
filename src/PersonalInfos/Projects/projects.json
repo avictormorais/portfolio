@@ -1,7 +1,7 @@
 [
   {
-    "icon": "../../src/assets/posterfy/logo.png",
-    "preview": "../../src/assets/posterfy/preview.png",
+    "icon": "../../public/posterfy/logo.png",
+    "preview": "../../public/posterfy/preview.png",
     "name": "Posterfy",
     "description": "Posterfy is a web application that allows users to create posters for their favorite albums using data and images from Spotify's free API.",
     "descriptionPt": "Posterfy é uma aplicação web que permite aos utilizadores criar pósteres para os seus álbuns favoritos utilizando dados e imagens da API gratuita do Spotify.",
@@ -23,8 +23,8 @@
     "deploy": "https://avictormorais.github.io/posterfy/"
   },
   {
-    "icon": "../../src/assets/moviemetricks/logo.png",
-    "preview": "../../src/assets/moviemetricks/preview.png",
+    "icon": "../../public/moviemetricks/logo.png",
+    "preview": "../../public/moviemetricks/preview.png",
     "name": "Moviemetricks",
     "description": "Moviemetricks is a social media platform where you can share your favorite movies and tv shows, see what your friends are watching, and comment on your opinion about them.",
     "descriptionPt": "Moviemetricks é uma plataforma de mídia social onde você pode compartilhar seus filmes e séries favoritos, ver o que seus amigos estão assistindo e comentar sua opinião sobre eles.",
