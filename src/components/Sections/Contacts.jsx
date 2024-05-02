@@ -7,6 +7,10 @@ import { useTranslation } from 'react-i18next';
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 700px){
+    margin-bottom: 65px;
+  }
 `
 
 function Skills(){

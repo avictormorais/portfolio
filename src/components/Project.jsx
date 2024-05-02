@@ -148,18 +148,20 @@ const StyledBtn = styled.button`
 
 function Project({ project }) {
   const { i18n } = useTranslation();
+  const { t } = useTranslation();
+
   const currentLanguage = i18n.language;
 
   return (
     project && (
       <StyledDivProject>
-        <StyledInfo mobile='true' title='true'>
+        <StyledInfo mobile={project.name} title={project.name}>
           <StyledLogo src={project.icon} />
           <StyledH1>{project.name}</StyledH1>
         </StyledInfo>
         <StyledProjectPreview src={project.preview} />
         <StyledDivInfos>
-          <StyledInfo title='true'>
+          <StyledInfo title={project.name}>
             <StyledLogo src={project.icon} />
             <StyledH1>{project.name}</StyledH1>
           </StyledInfo>
@@ -169,24 +171,30 @@ function Project({ project }) {
           ) : (
             <StyledDescription>{project.description}</StyledDescription>
           )}
-          <StyledInfo>
-            <StyledH3>Stack:</StyledH3>
-            {project.technologies.map((tech, index) => (
-              <IconSimple key={index} icon={tech.icon} color={tech.color} />
-            ))}
-          </StyledInfo>
-          <StyledInfo>
-            {project.deploy && (
-              <a href={project.deploy} target="_blank" rel="noopener noreferrer">
-                <StyledBtn>Deploy</StyledBtn>
-              </a>
-            )}
-            {project.github && (
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                <StyledBtn>Github</StyledBtn>
-              </a>
-            )}
-          </StyledInfo>
+          {project.technologies && (
+            <StyledInfo>
+              <StyledH3>Stack:</StyledH3>
+              {project.technologies.map((tech, index) => (
+                <IconSimple key={index} icon={tech.icon} color={tech.color} />
+              ))}
+            </StyledInfo>
+          )}
+          {project.deploy || project.github ? (
+            <StyledInfo>
+              {project.deploy && (
+                <a href={project.deploy} target="_blank" rel="noopener noreferrer">
+                  <StyledBtn>Deploy</StyledBtn>
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <StyledBtn>Github</StyledBtn>
+                </a>
+              )}
+            </StyledInfo>
+          ) : (
+            <StyledH3>{t('label-soon')}</StyledH3>
+          )}
         </StyledDivInfos>
       </StyledDivProject>
     )
