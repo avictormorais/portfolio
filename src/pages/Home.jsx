@@ -24,9 +24,9 @@ function Home(){
 
   let handleCVDownload = () => {
     if(currentLanguage == 'pt'){
-      window.open("../src/assets/cv.pdf", "_blank");
+      window.open("../CVs/cv.pdf", "_blank");
     } else {
-      window.open("../src/assets/cv-en.pdf", "_blank");
+      window.open("../CVs/cv-en.pdf", "_blank");
     }
   }
 
