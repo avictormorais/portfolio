@@ -83,7 +83,7 @@
       },
       {
         "icon": "bi:github",
-        "color": "#e94e31"
+        "color": "var(--primary-text-color)"
       },
       {
         "icon": "simple-icons:i18next",

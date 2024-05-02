@@ -51,3 +51,14 @@ body, #root, .App{
   overflow-x: hidden;
   width: 100vw;
 }
+
+*::-webkit-scrollbar {
+  width: 15px;
+  background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-text-color);
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
+}
