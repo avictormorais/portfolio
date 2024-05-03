@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react';
 import NavBar from './components/layouts/NavBar';
 import Footer from './components/layouts/Footer';
-import Error from './pages/Error';
+import Navigator from './components/layouts/Navigator';
 import { Outlet } from 'react-router-dom';
 import './index.css'
 
 function App() {
 
   return (
-    <div className="App" style={{marginTop: '95px'}}>
+    <div className="App">
       <NavBar></NavBar>
+      <Navigator></Navigator>
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

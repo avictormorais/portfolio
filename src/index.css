@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
 
 *{
-  font-family: montserrat, sans-serif;
+  font-family: Rubik, sans-serif;
   margin: 0px;
   padding: 0px;
   text-decoration: none;
@@ -11,16 +12,17 @@
 
 :root{
   --primary-color: #f0efeb;
-  --secondary-color: #ebeae5;
+  --secondary-color: #e6e4dd;
   --accent-color: #000000;
-  --primary-text-color: black;
+  --primary-text-color: #2c2929;
   --secondary-text-color: white;
   --padding-inline-layout: 70px;
+  --content-font: 'Cinzel', serif;
 }
 
 [data-theme="dark"]{
-  --primary-color: #08070b;
-  --secondary-color: #0f0e14;
+  --primary-color: #232833;
+  --secondary-color: #363b44;
   --accent-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;
@@ -48,4 +50,15 @@ body, #root, .App{
   align-items: center;
   overflow-x: hidden;
   width: 100vw;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+  background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-text-color);
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
 }
