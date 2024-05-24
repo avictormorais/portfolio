@@ -28,5 +28,10 @@
     "icon": "bxl:mongodb",
     "name": "MongoDB",
     "color": "#10a54e"
+  },
+  {
+    "icon": "simple-icons:vitest",
+    "name": "Vitest",
+    "color": "#729b1a"
   }
 ]
