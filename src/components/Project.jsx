@@ -93,7 +93,9 @@ const StyledH1 = styled.h1`
 const StyledHr = styled.hr`
   width: 100%;
   background-color: var(--secondary-color);
-  margin-block: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  opacity: 0.5;
 
   @media screen and (max-width: 1100px){
     display: none;

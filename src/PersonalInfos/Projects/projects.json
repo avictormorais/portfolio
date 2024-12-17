@@ -7,16 +7,20 @@
     "descriptionPt": "Posterfy é uma aplicação web que permite aos utilizadores criar pósteres para os seus álbuns favoritos utilizando dados e imagens da API gratuita do Spotify.",
     "technologies": [
       {
-        "icon": "mdi:language-javascript",
-        "color": "#f7df1e"
-      },
-      {
-        "icon": "flowbite:html-solid",
-        "color": "#e34c26"
-      },
-      {
-        "icon": "flowbite:css-solid",
+        "icon": "mdi:react",
         "color": "#0989c8"
+      },
+      {
+        "icon": "file-icons:styledcomponents",
+        "color": "#bf4f74"
+      },
+      {
+        "icon": "bi:github",
+        "color": "var(--primary-text-color)"
+      },
+      {
+        "icon": "simple-icons:i18next",
+        "color": "#019889"
       }
     ],
     "github": "https://github.com/avictormorais/posterfy",

@@ -33,5 +33,10 @@
     "icon": "akar-icons:postgresql-fill",
     "name": "Postgre",
     "color": "#366991"
+  },
+  {
+    "icon": "file-icons:solidity",
+    "name": "Solidity",
+    "color": "#1b1b1b"
   }
 ]

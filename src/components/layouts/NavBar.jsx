@@ -7,7 +7,7 @@ const StyledNav = styled.nav`
   display: flex;
   background-color: var(--primary-color);
   justify-content: start;
-  padding-block: 30px;
+  padding-block: 20px;
   align-items: center;
   width: 100vw;
   position: fixed;
