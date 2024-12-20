@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLaptopCode, FaUser, FaAddressCard, FaCode } from "react-icons/fa";
+import { FaLaptopCode, FaUser, FaAddressCard, FaCode, FaBriefcase } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 const StyledNavigator = styled.nav`
@@ -135,6 +135,10 @@ function Navigator() {
       <StyledItem onClick={() => handleScrollToSection("skillsSection")}>
         <FaCode />
         <Tooltip className="tooltip"><StyledTooltipText>{t('label-skills')}</StyledTooltipText></Tooltip>
+      </StyledItem>
+      <StyledItem onClick={() => handleScrollToSection("experiencesSection")}>
+        <FaBriefcase />
+        <Tooltip className="tooltip"><StyledTooltipText>{t('label-experiences')}</StyledTooltipText></Tooltip>
       </StyledItem>
       <StyledItem onClick={() => handleScrollToSection("projectsSection")}>
         <FaLaptopCode />

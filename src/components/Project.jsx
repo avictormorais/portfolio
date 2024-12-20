@@ -67,7 +67,7 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-block: 5px;
+  margin-block: 10px;
   flex-wrap: wrap;
 
   ${props => props.mobile && `
@@ -84,10 +84,47 @@ const StyledInfo = styled.div`
     `}
   }
 `
+
+const StyledColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 10px;
+`
+
+const StyledRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+`
+
+const StyledType = styled.p`
+  font-size: .85em;
+  font-family: var(--content-font);
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  margin-left: 10px;
+  margin-block: auto;
+`
+
+const StyledPeriod = styled.p`
+  font-size: .75em;
+  font-family: var(--content-font);
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  margin-left: 10px;
+  opacity: 0.8;
+`
+
 const StyledH1 = styled.h1`
   font-size: 1.35em;
   margin-left: 10px;
   font-family: var(--content-font);
+  white-space: nowrap;
 `
 
 const StyledHr = styled.hr`
@@ -159,13 +196,45 @@ function Project({ project }) {
       <StyledDivProject>
         <StyledInfo mobile={project.name} title={project.name}>
           <StyledLogo src={project.icon} />
-          <StyledH1>{project.name}</StyledH1>
+          <StyledColumn>
+            <StyledH1>{project.name}</StyledH1>
+            {project.type && (
+              currentLanguage === 'pt' ? (
+                <StyledType>{project.typePt}</StyledType>
+              ) : (
+                <StyledType>{project.type}</StyledType>
+              )
+            )}
+            {project.period && (
+                currentLanguage === 'pt' ? (
+                  <StyledPeriod>{project.periodPt}</StyledPeriod>
+                ) : (
+                  <StyledPeriod>{project.period}</StyledPeriod>
+                ))}
+          </StyledColumn>
         </StyledInfo>
-        <StyledProjectPreview src={project.preview} />
-        <StyledDivInfos>
+        {project.preview && <StyledProjectPreview src={project.preview} />}
+        <StyledDivInfos style={project.type ? {width: '90%'} : undefined}>
           <StyledInfo title={project.name}>
             <StyledLogo src={project.icon} />
-            <StyledH1>{project.name}</StyledH1>
+            <StyledColumn>
+              <StyledRow>
+                <StyledH1>{project.name}</StyledH1>
+                {project.type && (
+                  currentLanguage === 'pt' ? (
+                    <StyledType>{project.typePt}</StyledType>
+                  ) : (
+                    <StyledType>{project.type}</StyledType>
+                  )
+                )}
+              </StyledRow>
+              {project.period && (
+                currentLanguage === 'pt' ? (
+                  <StyledPeriod>{project.periodPt}</StyledPeriod>
+                ) : (
+                  <StyledPeriod>{project.period}</StyledPeriod>
+                ))}
+          </StyledColumn>
           </StyledInfo>
           <StyledHr />
           {currentLanguage === 'pt' ? (
@@ -195,7 +264,7 @@ function Project({ project }) {
               )}
             </StyledInfo>
           ) : (
-            <StyledH3>{t('label-soon')}</StyledH3>
+            null
           )}
         </StyledDivInfos>
       </StyledDivProject>

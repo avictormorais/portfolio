@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import projects from "../../PersonalInfos/Projects/projects";
 import Project from "../Project";
 import { useTranslation } from 'react-i18next';
 
@@ -35,7 +34,7 @@ const StyledButton = styled.button`
   }
 `
 
-function Projects(){
+function Projects({ content }){
   const { t } = useTranslation();
   const [showAllProjects, setShowAllProjects] = useState(false);
 
@@ -45,10 +44,10 @@ function Projects(){
 
   return (
     <StyledProjectSection>
-      {projects && (showAllProjects ? projects : projects.slice(0, 3)).map((project, index) => (
+      {content && (showAllProjects ? content : content.slice(0, 3)).map((project, index) => (
         <Project key={index} project={project}/>
       ))}
-      {projects && projects.length > 3 && (
+      {content && content.length > 3 && (
         <StyledButton onClick={toggleProjects}>
           {showAllProjects ? t('label-see-less') : t('label-see-more')}
         </StyledButton>

@@ -8,6 +8,9 @@ import Skills from "../components/Sections/Skills";
 import Contacts from "../components/Sections/Contacts";
 import Projects from "../components/Sections/Projects";
 
+import projects from "../PersonalInfos/Projects/projects.json";
+import experiences from "../PersonalInfos/Experiences/experiences";
+
 const StyledMarginTop = styled.span`
   height: 25vh;
 
@@ -44,7 +47,6 @@ function Home(){
   return (
     <>
       <StyledMarginTop/>
-     
       <PrincipalSection title={t('label-me')} text={t('text-me')}/>
 
       <span id="aboutMeSection">
@@ -59,8 +61,12 @@ function Home(){
         <PrincipalSection title={t('label-skills')} text={t('text-skills')} childComponent={() => <Skills/>}/>
       </span>
 
+      <span id="experiencesSection">
+        <PrincipalSection title={t('label-experiences')} text={isMobile ? t('text-experiences-short') : t('text-experiences-short')} childComponent={() => <Projects content={experiences}/>}/>
+      </span>
+
       <span id="projectsSection">
-        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <Projects/>}/>
+        <PrincipalSection title={t('label-projects')} text={isMobile ? t('text-projects-short') : t('text-projects')} childComponent={() => <Projects content={projects}/>}/>
       </span>
 
       <span id="contactSection">
